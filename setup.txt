@@ -1,0 +1,5 @@
+Namecheap Provides Domain Name that points to Netlify.
+Netlify uses GitHub to host files and handle login.
+
+https://app.netlify.com/teams/josephtindall/overview
+https://github.com/JosephTindall/portfolio
