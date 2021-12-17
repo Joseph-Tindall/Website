@@ -1,5 +1,5 @@
 body {
-    background-color: hsl(0, 0, 96);
+    background-color: hsl(0, 0%, 96%);
     color: hsl(0, 0, 40);
     line-height: 1.85em;
     font-size: 14px;
@@ -8,19 +8,19 @@ body {
 }
 
 section {
-    width: 100%;
     margin: 15px;
     padding: 15px;
-    display: inline-block;
-    background-color: hsl(0, 0, 100);
+    background-color: hsl(0, 0%, 100%);
     font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-section h1 {
+section h2 {
     width: 100%;
     display: block;
-    font-size: 22px;
-    color: hsl(0, 0, 20);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: hsl(0, 0%, 20%);
     padding-bottom: 15px;
-    border-bottom: 2px solid hsl(0, 0, 93);
+    border-bottom: 2px solid hsl(0, 0%, 93%);
 }
