@@ -1,35 +1,72 @@
-body {
-    background-color: hsl(0, 0%, 96%);
-    color: hsl(0, 0, 40);
-    line-height: 1.85em;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-section {
-    margin: 15px;
-    padding: 20px 35px;
-    background-color: hsl(0, 0%, 100%);
-    font-family: 'Open Sans', Helvetica, sans-serif;
-}
-
-section h2 {
-    margin: 15px 0 0 0;
-    width: 100%;
-    display: block;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0;
-    color: hsl(0, 0%, 20%);
-    padding-bottom: 15px;
-    border-bottom: 2px solid hsl(0, 0%, 93%);
-}
-
-section h5 {
+* {
     margin: 0;
-    padding: 5px 0;
-    color: hsl(0, 0%, 53%);
-    font-size: 14px;
-    font-weight: 300;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #081b29;
+    color: #ededed;
+}
+
+section.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+section.hero > div.hero-content {
+    max-width: 600px;
+}
+
+section.hero > div.hero-content > h1 {
+    position: relative;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section.hero > div.hero-content > h1::before,
+section.hero > div.hero-content > h3::before,
+section.hero > div.hero-content > p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081b29;
+    animation: showRight 1.2s ease forwards;
+    animation-delay: var(--delay, 0.3s);
+}
+
+section.hero > div.hero-content > h3::before {
+    --delay: 0.73s;
+}
+
+section.hero > div.hero-content > p::before {
+    --delay: 0.95s;
+}
+
+section.hero > div.hero-content > h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+section.hero > div.hero-content > p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
 }
