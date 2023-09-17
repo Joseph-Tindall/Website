@@ -9,22 +9,45 @@
 }
 
 body {
-    background: repeating-linear-gradient(
-      0deg,
-      #0E0D0E 25%,
-      #0E0D0E 50%,
-      #171819 50%,
-      #171819 75%
-    );
-  background-size: 10px 10px;
-  color: #ededed;
+    background-color: #081b29;
+    color: #ededed;
 }
 
 section.hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 3%;
+}
+
+section.banner {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+span#bin {
+    font-size: 3.5em;
+    width: calc(2 * 100vw);
+    height: calc(2 * 100vw);
+    display: block;
+    border-radius: 10px;
+    background-color: #5e3685;
+    color: rgba(0,0,0, 0.05);
+    margin: 0 auto;
+    font-family: 'Ubuntu Mono';
+    word-wrap: break-word;
+    line-height: 0.8em;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+    user-select: none;
+    margin-top: calc(-0.5 * 100vw);
+    margin-left: calc(-0.5 * 100vw);
 }
 
 section.hero > div.hero-content {
@@ -33,7 +56,16 @@ section.hero > div.hero-content {
 
 section.hero > div.hero-splash {
     height: 100vh;
-    width: 50%;
+    width: auto;
+    flex-grow: 1;
+    background-color: pink;
+}
+
+section.hero > div.hero-splash > span.hero-portrait {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: block;
 }
 
 section.hero > div.hero-content > h1 {
@@ -68,7 +100,7 @@ section.hero > div.hero-content > h3 {
     position: relative;
     font-size: 24px;
     font-weight: 700;
-    color: #ffc000;
+    color: #999;
 }
 
 section.hero > div.hero-content > p {
