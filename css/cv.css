@@ -218,6 +218,11 @@ section.hero > div.hero-content > div.social-links > a
     text-decoration: none;
 }
 
+section.hero > div.hero-content > div.social-links > a:hover
+{
+    opacity: 0.6;
+}
+
 @keyframes slideUp {
     100% {
         top: 0;
