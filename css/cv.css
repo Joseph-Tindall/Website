@@ -21,7 +21,7 @@ body
     color: #111;
 }
 
-body::after
+body::before
 {
     content: "";
     display: block;
@@ -96,6 +96,43 @@ body::after
     }
 }
 
+div.objects > div.object
+{
+    position: absolute;
+    animation: photo-object-floating 1s infinite ease-in-out alternate;
+}
+
+div.objects > div.object.ball
+{
+    top: 40%;
+    left: 80%;
+    animation-duration: 6.5s;
+}
+
+div.objects > div.object.cube
+{
+    top: 10%;
+    left: 60%;
+    animation-duration: 8.5s;
+}
+
+div.objects > div.object.pyramid
+{
+    top: 35%;
+    left: 50%;
+    animation-duration: 5.5s;
+}
+
+@keyframes photo-object-floating
+{
+    from {
+      transform: translateY(30px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+
 /*-----------------------------------*/
 
 section.hero {
@@ -103,40 +140,16 @@ section.hero {
     display: flex;
     align-items: center;
     padding: 0 3%;
-}
-
-section.banner {
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-span#bin {
-    font-size: 3.5em;
-    width: calc(2 * 100vw);
-    height: calc(2 * 100vw);
-    display: block;
-    border-radius: 10px;
-    background-color: #5e3685;
-    color: rgba(0,0,0, 0.05);
-    margin: 0 auto;
-    font-family: 'Ubuntu Mono';
-    word-wrap: break-word;
-    line-height: 0.8em;
-    letter-spacing: 1px;
-    overflow: hidden;
-    transform: rotate(-20deg);
-    user-select: none;
-    margin-top: calc(-0.5 * 100vw);
-    margin-left: calc(-0.5 * 100vw);
+    z-index: 10;
 }
 
 section.hero > div.hero-content {
     max-width: 630px;
+}
+
+section.hero > div.hero-content > *
+{
+    user-select: auto;
 }
 
 section.hero > div.hero-splash {
@@ -155,9 +168,10 @@ section.hero > div.hero-splash > span.hero-portrait {
 
 section.hero > div.hero-content > h1 {
     position: relative;
-    font-size: 52px;
-    font-weight: 700;
+    font-size: 3.5em;
+    font-weight: 500;
     line-height: 1.2;
+    font-family: 'Zilla Slab', serif;
 }
 
 section.hero > div.hero-content > h1,
@@ -177,21 +191,31 @@ section.hero > div.hero-content > p {
     --delay: 0.45s;
 }
 
-.glitch {
-  position: relative;
-}
-
 section.hero > div.hero-content > h3 {
     position: relative;
     font-size: 24px;
-    font-weight: 700;
-    color: #999;
+    font-weight: 400;
+    color: black;
 }
 
 section.hero > div.hero-content > p {
     position: relative;
     font-size: 18px;
     margin: 20px 0 40px;
+}
+
+section.hero > div.hero-content > div.social-links
+{
+    position: relative;
+}
+
+section.hero > div.hero-content > div.social-links > a
+{
+    width: 28px;
+    height: 28px;
+    padding: 0 2%;
+    margin: 0 2%;
+    text-decoration: none;
 }
 
 @keyframes slideUp {
