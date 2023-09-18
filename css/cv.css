@@ -34,13 +34,6 @@ body::after
     height: 100%;
 }
 
-div#particles-js
-{
-    opacity: 0.8;
-    filter: blur(0.04rem);
-    display: block;
-}
-
 .backdrop
 {
     width: 100%;
@@ -75,7 +68,7 @@ div#particles-js
 
 .backdrop > .shapes:nth-of-type(1)
 {
-    animation: 26s ease-in-out infinite alternate move;
+    animation: 56s ease-in-out infinite alternate move;
 }
 
 .backdrop > .shapes:nth-of-type(2)
